@@ -1,3 +1,23 @@
+
+
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E8C97A;
+  --dark: #0D0D0D;
+  --dark-2: #141414;
+  --dark-3: #1C1C1C;
+  --dark-4: #242424;
+  --border: rgba(201,168,76,0.18);
+  --border-hover: rgba(201,168,76,0.45);
+  --text: #F0EDE6;
+  --muted: #888580;
+  --danger: #E24B4A;
+  --success: #1D9E75;
+  --warning: #EF9F27;
+}
+
+body { background: var(--dark); color: var(--text); font-family: 'DM Sans', sans-serif; }
+
 /* APP LAYOUT */
 .app {
   display: grid;
