@@ -103,7 +103,7 @@ Observações: ${propertyData.notes || 'Nenhuma'}
         model: 'claude-sonnet-4-20250514',
         max_tokens: 3000,
         system: SYSTEM_PROMPT,
-        messages: [{ role: 'user', content: ANALYSIS_PROMPT(dadosFormatados, combinedDocText) }],
+        messages: [{ role: 'user', content: ANALYSIS_PROMPT(combinedDocText) }],
       }),
     })
 
