@@ -93,7 +93,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     })
 
     const aiData = await aiResponse.json()
-    const resultText = aiData.content?.[0]?.text ?? 'Erro na análise.'
+    const resultText = aiData.choices?.[0]?.message?.content ?? 'Erro na análise.'
 
     // Extract risk level and recommendation
     const riskMatch = resultText.match(/📊.*?NÍVEL.*?(Baixo|Médio|Alto)/i)
