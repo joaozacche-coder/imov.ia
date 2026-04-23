@@ -78,21 +78,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     // Build prompt
-    const dadosFormatados = `
-Tipo: ${propertyData.property_type}
-Localização: ${propertyData.neighborhood}
-Área: ${propertyData.area_m2 ? propertyData.area_m2 + 'm²' : 'não informado'}
-Lance/Preço: ${propertyData.price ? 'R$ ' + propertyData.price.toLocaleString('pt-BR') : 'não informado'}
-Valor de Mercado: ${propertyData.market_value ? 'R$ ' + propertyData.market_value.toLocaleString('pt-BR') : 'não informado'}
-Origem: ${propertyData.origin}
-Ocupação: ${propertyData.occupation}
-Nível de Reforma: ${propertyData.renovation_level}
-Objetivo: ${propertyData.objective}
-Observações: ${propertyData.notes || 'Nenhuma'}
-    `.trim()
-
-    // Call Claude
-    const aiResponse = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
